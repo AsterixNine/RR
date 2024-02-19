@@ -1,0 +1,204 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 4px solid #fbb03b;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.catalogo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categoria {
+    flex-basis: 23%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.categoria h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    background-color: #fbb03b;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #f9a602;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* O CSS anterior permanece o mesmo */
+
+.redes-sociais {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.redes-sociais img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.1);
+}
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Estilo para a barra de navegação responsiva */
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+/* Estilo para o menu de hambúrguer em dispositivos móveis */
+.menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Reduz a largura do contêiner em telas menores */
+    }
+
+    /* Oculta o menu tradicional e exibe o menu de hambúrguer */
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        text-align: right;
+        margin-top: -40px; /* Ajusta a posição do menu de hambúrguer */
+    }
+
+    .menu-toggle a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        background-color: #222;
+        border-radius: 5px;
+    }
+
+    .menu-toggle a:hover {
+        background-color: #444;
+    }
+
+    /* Exibe o menu quando o menu de hambúrguer é clicado */
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajusta a posição do menu suspenso */
+        background-color: #222;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav ul.show li {
+        text-align: center;
+        margin: 0;
+    }
+}
